@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /*样式*/
+        /*样式初始化，为了兼容*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none; /*去掉列表样式小点*/
+        }
+
+        /*清除浮动*/
+        .clearfix:before, .clearfix:after {
+            display: table;
+            content: "";
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        /*页面头部分*/
+        header {
+            height: 100px;
+
+            /*防止外边距合并*/
+            overflow: hidden;
+        }
+
+        nav {
+            height: 42px;
+            width: 1366px;
+            margin: 26px auto;
+
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .navbar {
+            margin-left: 50px;
+            float: left;
+            height: 42px;
+            line-height: 42px;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        a {
+            color: #050505;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #f3f5f7;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        input {
+            /*所有边框为0*/
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar li a {
+            padding: 0 9px; /* 上下0  左右8像素  */
+            display: block;
+            height: 42px;
+        }
+
+        .navbar li a:hover {
+            border-bottom: 2px solid dodgerblue;
+        }
+
+        /*搜索框*/
+        .search {
+            width: 410px;
+            height: 38px;
+            border: 1px solid #00a4ff;
+            float: right;
+        }
+
+        .search input[type=text] {
+            padding-left: 20px;
+            width: 360px;
+            height: 38px;
+            float: left;
+        }
+
+        .search input[type=submit] {
+            width: 50px;
+            height: 38px;
+            float: left;
+            background: #00a4ff url("images/search_06.png") center center no-repeat;
+        }
+
+        /*个人中心*/
+        .person {
+            float: right;
+            height: 42px;
+            line-height: 42px;
+            /*上右下左*/
+            margin: 0 15px 0 35px;
+        }
+
+        .person img {
+            margin: 0 8px;
+        }
+
+        /*banner*/
+        .banner {
+            height: 420px;
+            background-color: #1c036c;
+        }
+
+        .banner-in {
+            height: 420px;
+            background: url("images/banner_03.png") center;
+        }
+
+        .slidebar {
+            float: left;
+            height: 420px;
+            width: 190px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .slidebar li a {
+            color: #fff;
+            font-size: 16px;
+            padding: 0 20px;
+            display: block;
+            line-height: 45px;
+        }
+
+        .slidebar a:hover {
+            color: #00a4ff;
+        }
+
+        .slidebar span {
+            float: right;
+            font-family: Arial;
+        }
+
+        .timetable {
+            width: 230px;
+            height: 300px;
+            float: right;
+            background-color: #fff;
+            margin-top: 35px;
+        }
+
+        .timetable dt {
+            height: 50px;
+            line-height: 50px;
+            background-color: #9bceea;
+            text-align: center;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .timetable dd {
+            width: 193px;
+            height: 60px;
+            margin: 0 auto;
+            padding-top: 14px;
+            border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .timetable dd:last-child {
+            border: 0;
+        }
+
+        .timetable dd h4 {
+            font-size: 16px;
+            color: #4e4e4e;
+            font-weight: normal;
+        }
+
+        .timetable dd p {
+            color: #a5a5a5a5;
+            font-size: 10px;
+        }
+
+        .timetable dd a {
+            height: 38px;
+            border: 1px solid #00a4ff;
+            display: block;
+            text-align: center;
+            line-height: 38px;
+            color: #00a4ff;
+            font-weight: 700;
+        }
+
+    </style>
+    <title>学成网</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            <img src="images/logo-s.png" alt="">
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">课程</a></li>
+                <li><a href="#">职业规划</a></li>
+
+            </ul>
+
+        </div>
+        <div class="person">
+
+            <a href="#">个人中心 <img src="images/ling_06.png"></a>
+            <a href="#"><img src="images/tou_03.png">吴彦祖</a>
+        </div>
+        <div class="search">
+            <form action="">
+                <input type="text" placeholder="请输入关键字">
+                <input type="submit" value="">
+            </form>
+        </div>
+
+    </nav>
+
+</header>
+<!--banner-->
+<div class="banner">
+    <div class="banner-in container">
+        <div class="slidebar">
+            <ul>
+                <li><a href="#">前端开发 <span>></span></a></li>
+                <li><a href="#">后端开发 <span>></span></a></li>
+                <li><a href="#">后端开发 <span>></span></a></li>
+                <li><a href="#">后端开发 <span>></span></a></li>
+                <li><a href="#">后端开发 <span>></span></a></li>
+                <li><a href="#">后端开发 <span>></span></a></li>
+                <li><a href="#">后端开发 <span>></span></a></li>
+                <li><a href="#">后端开发 <span>></span></a></li>
+                <li><a href="#">后端开发 <span>></span></a></li>
+            </ul>
+        </div>
+
+        <!--课表-->
+        <dl class="timetable">
+            <dt>我的课程表</dt>
+            <dd>
+                <h4>继续学习 程序语言</h4>
+                <p>正在学习-使用对象</p>
+            </dd>
+            <dd>
+                <h4>继续学习 程序语言</h4>
+                <p>正在学习-使用对象</p>
+            </dd>
+            <dd>
+                <h4>继续学习 程序语言</h4>
+                <p>正在学习-使用对象</p>
+            </dd>
+            <dd>
+                <a href="#">全部课程</a>
+            </dd>
+        </dl>
+    </div>
+
+</div>
+</body>
+</html>
